@@ -18,6 +18,7 @@ include_directories(.)
 
 set(DL ${CMAKE_DL_LIBS})
 
+
 find_package(ct_core)
 find_package(ct_optcon)
 find_package(Ceres)
@@ -118,10 +119,10 @@ if(Bullet_FOUND)
     #target_link_libraries(neural_pendulum pybullet_visualizer_api ${DL}
     #        ${CERES_LIBRARIES})
 
-    add_definitions(-DNEURAL_SIM)
-    add_executable(neural_discovery neural_discovery.cpp ${TDS_HDRS})
-    target_link_libraries(neural_discovery pybullet_visualizer_api ${DL}
-           ${CERES_LIBRARIES})
+    #add_definitions(-DNEURAL_SIM)
+    #add_executable(neural_discovery neural_discovery.cpp ${TDS_HDRS})
+    #target_link_libraries(neural_discovery pybullet_visualizer_api ${DL}
+    #       ${CERES_LIBRARIES})
 
     #add_executable(neural_actuator neural_actuator.cpp ${TDS_HDRS})
     #target_link_libraries(neural_actuator pybullet_visualizer_api ${DL}
@@ -397,7 +398,6 @@ function(enoki_test NAME SOURCE)
   endif()
 endfunction()
 
-message("HIHIHIHIHIE!!!!!!!!!!!!!!!!!")
 if (Bullet_FOUND)
     enoki_test(enoki_hello_world enoki_hello_world.cpp)
     set_target_properties(enoki_hello_world_none PROPERTIES FOLDER autodiff)

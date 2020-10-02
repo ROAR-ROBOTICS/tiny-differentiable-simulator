@@ -27,7 +27,7 @@
 #include "math/tiny/tiny_algebra.hpp"
 #include "math/tiny/tiny_double_utils.h"
 #include "math/tiny/tiny_dual.h"
-#include "math/tiny/tiny_dual_double_utils.h"
+#include "math/tiny/tiny_dual_utils.h"
 #include "visualizer/pybullet/pybullet_visualizer_api.h"
 #include "rigid_body.hpp"
 #include "utils/file_utils.hpp"
